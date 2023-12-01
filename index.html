@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fifteen</title>
+    <link href="fifteen.css" type="text/css" rel="stylesheet">
+    <script src="fifteen.js"></script>
+</head>
+<body>
+    <div class="navBar">
+        <h1>FIFTEEN PUZZLE</h1>
+    </div>
+    <div class='container'>
+        <div style="display:none;" id="alert">
+            <!-- the div to say congratulations if you win-->
+            <div class="detail_alert">
+                <img src="gj4.gif" alt="congratulations" class="congratsImg">
+                <div id="msg" style="margin-top:20px;"></div>
+                <!-- Display the alert detail-->
+                <br>
+                <form>
+                    <input type="button" value="OK" class="congratsbutton" onclick="ok_check()">
+                    <!-- Hit ok then call function to hide alert notice -->
+                </form>
+            </div>
+        </div>
+        <script>
+            function ok_check() {
+                var ok = document.getElementById("alert");
+                ok.style.display = "none";
+            }
+        </script>
+
+        <div class="row">
+            <div class="column1">
+                <h3>Rules</h3>
+                <ul>
+                    <li>The goal of the game is to arrange the tiles into numerical order by repeatedly sliding the squares into the empty space.</li>
+                    <li>Hit 'Start Game' to shuffle the puzzle and begin the challenge.</li>
+                    <li>Tips: First get the entire top & left sides
+                        into proper position. </li>        
+                    <li>Don't touch those squares again.Now what’s left to be solved is a 3x3 board, which is much easier.</li>
+                </ul>
+            </div>
+
+            <div class="column2">
+                <div class="game_frame radial_repeating">
+                    <div class="counterText counterDiv">
+                        <p id="counter">Moves:&emsp; 0</p>
+                        <p id="timer">Time:&emsp; 0:0:0</p>
+                    </div>
+                    <div id="game_area"></div>
+                    <p id="controls">
+                        <button id="start_game" class="buttons">Start Game</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="column3" id="column3">
+                <!-- Images selection buttons added in JS -->
+                <h3>Choose a background</h3>
+            </div>
+        </div>
+
+        <div id="show"> </div>
+        <audio id="audio" loop>
+            <source src="chillout.mp3" type="audio/mpeg" id="track"> 
+        </audio>
+        <!--</div>-->
+    </div>
+    <div class="w3cValidators">
+        <a href="https://validator.w3.org/"><img src="w3c-xhtml.png" alt="Valid HTML"></a>
+        <a href="https://jigsaw.w3.org/css-validator/"><img src="w3c-css.png" alt="Valid CSS"></a>
+    </div>
+</body>
+</html>

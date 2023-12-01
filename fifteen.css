@@ -1,0 +1,309 @@
+body {
+	font-family: "Lucida", monospace;
+	background-color: #f6f6f2;
+  	font-size: 18px; 
+	margin: 0px;
+}
+  
+h1{
+	color: #343148FF;
+}
+  
+h3{
+	color: #343148FF;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 30px;
+}
+
+p{
+	line-height: 5px;
+	animation: slideUp .8s ease-in-out forwards .8s;
+	transform: translateY(300px);
+}
+
+/*game border css*/
+.game_frame{
+	border-top: 10px solid;
+	border-bottom: 30px solid;
+	border-left: 80px solid;
+	border-right: 80px solid;
+	width: 550px;
+	font-size: 1.6rem;
+	margin: auto;
+	color: rgb(205, 196, 196) ;
+	padding: 0px;
+}
+
+/*div for the timer and moves*/
+.counterText {	
+	font-family: "Lucida", monospace;
+}
+
+/*this the div for the puzzle board*/
+#game_area{
+	margin: 0 auto; 
+	height: 380px;
+	position: relative; 
+	width: 400px;  
+}
+
+/*css of the div that holds the timer and moves made*/
+.counterDiv{
+	font-size: 24px;
+    margin: 1px;
+	color: FloralWhite;
+	border: 15px double FloralWhite;
+    background-color: #796465;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/*this is the css of the tiles of the game*/
+.tiles{ 
+	position: absolute;
+	border: 1px solid black; 
+    position: absolute;
+	font-size: 30px;
+}
+
+/*css tag found js file. button of option images*/
+.choose_bg{
+	padding: 0px;
+	height: 110px;
+	width: 110px;
+	cursor: pointer;
+}
+
+/*css tag found js file. add the img options in column 3 of webpage*/
+.img1{
+	height: 95px;
+	width: 95px;
+}
+
+.container {
+	position: relative;
+    align-items: center;
+    color: black;
+    height: 100vh;
+    justify-content: space-around;
+    background-color: #f6f6f2; /*backgraound of containter*/
+}
+.navBar {
+	margin-top:0px;
+	overflow: hidden;
+	top: 0;
+	height: 70px;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-color: #f6f6f2; /*COLOR OF NAVIGATION BAR*/
+}
+
+@keyframes slideIn{
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+/*this css code will transform the whole website up when opened/ refreshed*/
+@keyframes slideUp{
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand{
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+} 
+
+/*this will change the cursur to a pointer when hovering over block that
+can be moved*/
+.text1{ 
+    cursor: pointer;
+}
+
+/*this will add a red border to block that can be moved*/
+.text1:hover{ 
+	box-shadow: 0px 0px 2px 2px red;
+}
+
+/*image of the congrats alert gif*/
+.congratsImg{
+	margin: auto;
+	width:250px;
+	height:180px;
+}
+
+/*div of the congrats message*/
+.detail_alert{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 5vh;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-name: backgroundColorPalette;
+	width: 50%;
+	border: 5px dashed;
+	border-radius: 10px 10px 10px 10px;
+}
+
+/*This is for the congrats alert*/
+#alert{
+	left: 0;
+	top: 0;
+	display: none;
+	position: fixed;
+	z-index: 1; /* Sit on top */
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.4);
+	background-color: rgb(0,0,0);
+}
+/*div of the text inside the congrats alert*/
+#msg{
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+}
+
+/*button of the congrats alert*/
+.congratsbutton{
+	width: 50px;
+	margin-bottom:10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.choose_bg:hover{ 
+	background-image: linear-gradient(
+      to right, 
+      #343148FF,
+      #f6f6f2
+    );
+	box-shadow: 5px 5px 15px 5px #343148FF;
+/*  animation:slidebg 2s linear infinite;*/
+}
+
+/*css of the 'start game' and '4x4' buttons*/
+.buttons {
+	cursor: pointer;
+	background-color: #343148FF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    padding-left: 10px;
+	padding-right: 10px;
+	border: 7px double FloralWhite;
+    border-radius: 15px;
+    color: FloralWhite;
+    margin: 3px;
+	text-align: center;
+    font-size: 25px;
+}
+
+.buttons:hover{ 
+	background-image: linear-gradient(
+      to right, 
+      black,
+      black
+    );
+	box-shadow: 5px 5px 15px 5px black;
+}
+
+ul{
+	font-weight:bold;
+}
+.rainbow{  
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #343A40;
+  border-radius: 4px;
+ 
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+.button_9{
+	padding: 0.85em 0.75em;
+	cursor:pointer;
+	font-size: 1em;
+    border: 0.25rem solid #7FE466;
+    margin: 1rem;
+    border-radius: 50px;
+	background: #7FE466;
+    color: #fff;
+}
+
+/*div that has col 1, 2, & 3*/
+.row {
+	display: flex;
+	animation: slideUp .8s ease-in-out forwards .8s;
+	transform: translateY(1000px);
+}
+
+/*col 1 */
+.column1{
+	line-height: 28px;
+	flex: 25%;
+}
+
+/*col2*/
+.column2 {
+	flex: 50%;
+	text-align: center;
+}
+
+/*col3*/
+.column3 {
+	flex: 25%;
+	line-height: 28px;
+	text-align: center;
+}
+
+@keyframes spin {100% { transform:rotate(360deg); }}
+
+/*this css is for animating the win message colors*/
+@keyframes backgroundColorPalette{
+	
+  0% {
+    background: #4E4187;
+		border: 4px solid #4E4187;
+  }
+  25% {
+    background: #3083DC;
+		border: 4px solid #3083DC;
+  }
+  50% {
+    background: #2EBFA5;
+		border: 4px solid #2EBFA5;
+  }
+  75% {
+    background: #7DDE92;
+		border: 4px solid #7DDE92;
+  }
+  100% {
+    background: #F8FFE5;
+		border: 4px solid #F8FFE5;
+  }
+}
+
+.w3cValidators{
+	margin-left: 85%;
+}
